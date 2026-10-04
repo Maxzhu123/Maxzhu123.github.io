@@ -16,7 +16,7 @@
     "Liberation Mono", monospace;
 
   --step--1: clamp(0.82rem, 0.79rem + 0.14vw, 0.9rem);
-  --step-0: clamp(1rem, 0.95rem + 0.24vw, 1.125rem);
+  --step-0: clamp(1rem, 0.95rem + 0.26vw, 1.1875rem);
   --step-1: clamp(1.19rem, 1.12rem + 0.33vw, 1.38rem);
   --step-2: clamp(1.41rem, 1.29rem + 0.58vw, 1.75rem);
   --step-3: clamp(1.68rem, 1.46rem + 1.06vw, 2.33rem);
@@ -40,8 +40,8 @@
   --radius-pill: 999px;
 
   /* Layout */
-  --measure: 48rem;
-  --measure-wide: 52rem;
+  --measure: 56rem;
+  --measure-wide: 60rem;
 
   /* Palette — bright white with a vivid blue accent */
   --bg: #ffffff;
