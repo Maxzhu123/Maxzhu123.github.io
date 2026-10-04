@@ -220,17 +220,18 @@
 
         <li class="project">
           <h3 class="project__name">
-            <a href="https://github.com/Maxzhu123/lossless_compression">Lossless tensor compression</a>
+            <a href="https://github.com/Maxzhu123/Losslessly_Compressed_Tensors">Lossless tensor compression</a>
           </h3>
           <p class="project__desc">
-            A compressed tensor type with GPU-friendly codecs, so tensors stay
-            compressed in memory and are decompressed on the fly during training.
-            Covers matmul, pointwise and sparse-update paths, plugs into nanoGPT and
-            Qwen3 training, and includes measurements of how compressible language
-            model weights and activations actually are.
+            A lossless compression scheme for PyTorch training and inference: BF16
+            tensors are Huffman-coded and reconstructed without loss, for up to 1.4&times;
+            memory reduction with minimal overhead. Weights, activations and optimiser
+            state are all supported. Kernels are written in Triton with an optional
+            TileLang backend, and the repository includes nanoGPT training and
+            compression benchmarks.
           </p>
           <p class="project__meta">
-            <a href="https://github.com/Maxzhu123/lossless_compression">Code</a>
+            <a href="https://github.com/Maxzhu123/Losslessly_Compressed_Tensors">Code</a>
           </p>
         </li>
         <li class="project">
