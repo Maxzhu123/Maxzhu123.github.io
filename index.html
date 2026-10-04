@@ -25,9 +25,10 @@
 
 <!--
   ===========================================================================
-  CONTENT CHECKLIST — everything below is placeholder text, ready to replace.
-  Search for "EDIT" to find each spot.
-  Auto-filled and worth confirming: name, role, supervisor, email, GitHub.
+  Publications and Projects contain real, verified content (arXiv:2409.07042
+  and the public repositories). The bio and research statement are drafts
+  written from that public work — please read them over.
+  Search for "EDIT" for the remaining spots to fill in.
   ===========================================================================
 -->
 
@@ -42,6 +43,7 @@
       <a class="nav__link" href="#about">About</a>
       <a class="nav__link" href="#research">Research</a>
       <a class="nav__link" href="#publications">Publications</a>
+      <a class="nav__link" href="#projects">Projects</a>
       <a class="nav__link" href="#contact">Contact</a>
     </nav>
 
@@ -147,9 +149,9 @@
           My research sits at the intersection of machine learning and statistics.
         </p>
         <p>
-          Before starting my PhD I completed <!-- EDIT: previous degree and institution --> my
-          previous degree, where I worked on <!-- EDIT: earlier research area --> topics in
-          machine learning.
+          I have also worked on machine learning for scientific discovery. My first
+          paper used Bayesian active learning to map complex phase diagrams, and I have
+          built numerical solvers and learned surrogates for fluid dynamics.
         </p>
       </div>
     </div>
@@ -171,14 +173,20 @@
           My current work is supervised by
           <a href="https://www.dpmms.cam.ac.uk/~qz280/">Qingyuan Zhao</a>.
         </p>
+        <p>
+          I also work on machine learning for the physical sciences, where the data is
+          expensive: active learning to design the next experiment, and learned
+          surrogates for numerical simulation.
+        </p>
       </div>
 
       <!-- EDIT: research areas -->
       <ul class="tags" style="margin-top: var(--space-5)">
         <li class="tag">Machine learning</li>
-        <li class="tag">Statistical methodology</li>
         <li class="tag">Causal inference</li>
-        <li class="tag">Optimisation</li>
+        <li class="tag">Active learning</li>
+        <li class="tag">Gaussian processes</li>
+        <li class="tag">Scientific machine learning</li>
       </ul>
     </div>
   </section>
@@ -191,51 +199,187 @@
         <span class="section__rule" aria-hidden="true"></span>
       </div>
 
-      <!-- EDIT: replace these entries, or delete the whole <ol> and use the note below. -->
       <ol class="pubs">
         <li>
           <article class="pub">
-            <div class="pub__year">2026</div>
+            <div class="pub__year">2024</div>
             <div>
               <h3 class="pub__title">
-                <a href="#">Paper title goes here</a>
+                <a href="https://arxiv.org/abs/2409.07042">Active Learning for Discovering
+                  Complex Phase Diagrams with Gaussian Processes</a>
               </h3>
               <p class="pub__authors">
-                <span class="me">Max Zhu</span>, A. Coauthor, Q. Zhao.
+                <span class="me">Max Zhu</span>, Jian Yao, Marcus Mynatt,
+                Hubert Pugzlys, Shuyi Li, Sergio Bacallado, Qingyuan Zhao, Chunjing Jia.
               </p>
-              <p class="pub__venue">Journal or conference name</p>
-              <ul class="pub__links">
-                <li><a href="#">Paper</a></li>
-                <li><a href="#">Code</a></li>
-                <li><a href="#">arXiv</a></li>
-              </ul>
-            </div>
-          </article>
-        </li>
-
-        <li>
-          <article class="pub">
-            <div class="pub__year">2025</div>
-            <div>
-              <h3 class="pub__title">
-                <a href="#">Another paper title goes here</a>
-              </h3>
-              <p class="pub__authors">
-                A. Coauthor, <span class="me">Max Zhu</span>.
+              <p class="pub__venue">
+                NeurIPS 2023 Workshop on Machine Learning and the Physical Sciences;
+                arXiv:2409.07042
               </p>
-              <p class="pub__venue">Workshop or conference name</p>
               <ul class="pub__links">
-                <li><a href="#">Paper</a></li>
-                <li><a href="#">Poster</a></li>
+                <li><a href="https://arxiv.org/abs/2409.07042">arXiv</a></li>
+                <li><a href="https://arxiv.org/pdf/2409.07042">PDF</a></li>
+                <li><a href="https://ml4physicalsciences.github.io/2023/files/NeurIPS_ML4PS_2023_178.pdf">Workshop paper</a></li>
+                <li><a href="https://github.com/Maccy-Z/Active_Learning_Phase_Diagram">Code</a></li>
               </ul>
             </div>
           </article>
         </li>
       </ol>
+    </div>
+  </section>
 
-      <!-- Alternative for when there are no papers yet — swap in and delete the list above:
-      <p class="note">Papers and preprints will appear here.</p>
-      -->
+  <!-- ===================== Projects ===================== -->
+  <!--
+    EDIT: drawn from the public repositories on github.com/Maxzhu123 and
+    github.com/Maccy-Z. Add or remove cards as you like.
+  -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 class="section__title">Projects</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+
+      <ul class="projects">
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maxzhu123/bitsparse">Sparse activations in training</a>
+          </h3>
+          <p class="project__desc">
+            A training-time codec that keeps only the nonzero activations behind a ReLU
+            feed-forward layer, stored as a packed bitmask with tile offsets and
+            reconstructed during the backward pass. Supports BF16 and FP8 storage,
+            squared ReLU and optional sign-bit packing, with Triton kernels benchmarked
+            against CSR, nvCOMP and dense compaction on nanoGPT and Nemotron-H.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maxzhu123/bitsparse">Code</a>
+          </p>
+        </li>
+
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maxzhu123/lossless_compression">Lossless tensor compression</a>
+          </h3>
+          <p class="project__desc">
+            A compressed tensor type with GPU-friendly codecs, so tensors stay
+            compressed in memory and are decompressed on the fly during training.
+            Covers matmul, pointwise and sparse-update paths, plugs into nanoGPT and
+            Qwen3 training, and includes measurements of how compressible language
+            model weights and activations actually are.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maxzhu123/lossless_compression">Code</a>
+          </p>
+        </li>
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maccy-Z/Active_Learning_Phase_Diagram">Active learning for phase diagrams</a>
+          </h3>
+          <p class="project__desc">
+            Bayesian active learning with Gaussian processes that picks the most
+            informative experiment to run next, mapping multi-phase diagrams in two and
+            three dimensions from a small fraction of the possible sample points.
+            Includes a 2D/3D viewer.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maccy-Z/Active_Learning_Phase_Diagram">Code</a>
+          </p>
+        </li>
+
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maxzhu123/fvm_solver">Finite-volume solver</a>
+          </h3>
+          <p class="project__desc">
+            A compressible finite-volume solver with Newtonian, power-law, Carreau and
+            Herschel&ndash;Bulkley viscosity models, isentropic, characteristic and
+            farfield boundary conditions, mesh generation for nozzle and ellipse
+            geometries, and CUDA benchmarks in two and three dimensions.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maxzhu123/fvm_solver">Code</a>
+          </p>
+        </li>
+
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maccy-Z/Neural-PDE">Neural PDE solvers</a>
+          </h3>
+          <p class="project__desc">
+            Learned PDE surrogates paired with GPU sparse linear algebra: AMGx bindings
+            and sparse matrix-multiply benchmarks, sharing the mesh generation and
+            time-stepping setups of the finite-volume solver.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maccy-Z/Neural-PDE">Code</a>
+          </p>
+        </li>
+
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maccy-Z/optimizer">Optimiser experiments</a>
+          </h3>
+          <p class="project__desc">
+            Experimental optimisers and training-loop hooks evaluated on nanoGPT and
+            Nemotron, including sparse variants and empirical studies of how optimiser
+            trajectories behave during training.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maccy-Z/optimizer">Code</a>
+          </p>
+        </li>
+
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maccy-Z/LLM_eagle">Mesh transformers for turbulent flow</a>
+          </h3>
+          <p class="project__desc">
+            A reimplementation of the EAGLE benchmark for forecasting turbulent fluid
+            dynamics on large meshes, with mesh-GNN, GAT and GraphViT baselines and
+            node-clustering utilities.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maccy-Z/LLM_eagle">Code</a>
+          </p>
+        </li>
+
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maxzhu123/LLMLaw_hackathon">Legal document chatbot</a>
+          </h3>
+          <p class="project__desc">
+            Hackathon build: a Streamlit chatbot that answers questions over legal
+            documents, with Word document parsing, summary and email prompt templates,
+            and conversation memory.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maxzhu123/LLMLaw_hackathon">Code</a>
+          </p>
+        </li>
+
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maccy-Z/c_print">c_print</a>
+          </h3>
+          <p class="project__desc">
+            A small colour-print helper for Python, installable straight from GitHub.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maccy-Z/c_print">Code</a>
+          </p>
+        </li>
+      </ul>
     </div>
   </section>
 
