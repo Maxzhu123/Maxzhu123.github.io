@@ -42,8 +42,8 @@
     <nav class="nav" aria-label="Sections" data-nav>
       <a class="nav__link" href="#about">About</a>
       <a class="nav__link" href="#research">Research</a>
-      <a class="nav__link" href="#publications">Publications</a>
       <a class="nav__link" href="#projects">Projects</a>
+      <a class="nav__link" href="#publications">Publications</a>
       <a class="nav__link" href="#contact">Contact</a>
     </nav>
 
@@ -184,6 +184,87 @@
       <!-- EDIT: research areas -->
       <ul class="tags" style="margin-top: var(--space-5)">
         <li class="tag">Machine learning</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== Projects ===================== -->
+  <!--
+    EDIT: drawn from the public repositories on github.com/Maxzhu123 and
+    github.com/Maccy-Z. Add or remove cards as you like.
+  -->
+  <section class="section" id="projects">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 class="section__title">Projects</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+
+      <ul class="projects">
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maxzhu123/bitsparse">Sparse activations in training</a>
+          </h3>
+          <p class="project__desc">
+            A training-time codec that keeps only the nonzero activations behind a ReLU
+            feed-forward layer, stored as a packed bitmask with tile offsets and
+            reconstructed during the backward pass. Supports BF16 and FP8 storage,
+            squared ReLU and optional sign-bit packing, with Triton kernels benchmarked
+            against CSR, nvCOMP and dense compaction on nanoGPT and Nemotron-H.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maxzhu123/bitsparse">Code</a>
+          </p>
+        </li>
+
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maxzhu123/lossless_compression">Lossless tensor compression</a>
+          </h3>
+          <p class="project__desc">
+            A compressed tensor type with GPU-friendly codecs, so tensors stay
+            compressed in memory and are decompressed on the fly during training.
+            Covers matmul, pointwise and sparse-update paths, plugs into nanoGPT and
+            Qwen3 training, and includes measurements of how compressible language
+            model weights and activations actually are.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maxzhu123/lossless_compression">Code</a>
+          </p>
+        </li>
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maccy-Z/Active_Learning_Phase_Diagram">Active learning for phase diagrams</a>
+          </h3>
+          <p class="project__desc">
+            Bayesian active learning with Gaussian processes that picks the most
+            informative experiment to run next, mapping multi-phase diagrams in two and
+            three dimensions from a small fraction of the possible sample points.
+            Includes a 2D/3D viewer.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maccy-Z/Active_Learning_Phase_Diagram">Code</a>
+          </p>
+        </li>
+
+        <li class="project">
+          <h3 class="project__name">
+            <a href="https://github.com/Maxzhu123/fvm_solver">Finite-volume solver</a>
+          </h3>
+          <p class="project__desc">
+            A compressible finite-volume solver with Newtonian, power-law, Carreau and
+            Herschel&ndash;Bulkley viscosity models, isentropic, characteristic and
+            farfield boundary conditions, mesh generation for nozzle and ellipse
+            geometries, and CUDA benchmarks in two and three dimensions.
+          </p>
+          <p class="project__meta">
+            <span class="project__lang">Python</span>
+            <a href="https://github.com/Maxzhu123/fvm_solver">Code</a>
+          </p>
+        </li>
       </ul>
     </div>
   </section>
@@ -359,87 +440,6 @@
           </article>
         </li>
       </ol>
-    </div>
-  </section>
-
-  <!-- ===================== Projects ===================== -->
-  <!--
-    EDIT: drawn from the public repositories on github.com/Maxzhu123 and
-    github.com/Maccy-Z. Add or remove cards as you like.
-  -->
-  <section class="section" id="projects">
-    <div class="wrap">
-      <div class="section__head">
-        <h2 class="section__title">Projects</h2>
-        <span class="section__rule" aria-hidden="true"></span>
-      </div>
-
-      <ul class="projects">
-        <li class="project">
-          <h3 class="project__name">
-            <a href="https://github.com/Maxzhu123/bitsparse">Sparse activations in training</a>
-          </h3>
-          <p class="project__desc">
-            A training-time codec that keeps only the nonzero activations behind a ReLU
-            feed-forward layer, stored as a packed bitmask with tile offsets and
-            reconstructed during the backward pass. Supports BF16 and FP8 storage,
-            squared ReLU and optional sign-bit packing, with Triton kernels benchmarked
-            against CSR, nvCOMP and dense compaction on nanoGPT and Nemotron-H.
-          </p>
-          <p class="project__meta">
-            <span class="project__lang">Python</span>
-            <a href="https://github.com/Maxzhu123/bitsparse">Code</a>
-          </p>
-        </li>
-
-        <li class="project">
-          <h3 class="project__name">
-            <a href="https://github.com/Maxzhu123/lossless_compression">Lossless tensor compression</a>
-          </h3>
-          <p class="project__desc">
-            A compressed tensor type with GPU-friendly codecs, so tensors stay
-            compressed in memory and are decompressed on the fly during training.
-            Covers matmul, pointwise and sparse-update paths, plugs into nanoGPT and
-            Qwen3 training, and includes measurements of how compressible language
-            model weights and activations actually are.
-          </p>
-          <p class="project__meta">
-            <span class="project__lang">Python</span>
-            <a href="https://github.com/Maxzhu123/lossless_compression">Code</a>
-          </p>
-        </li>
-        <li class="project">
-          <h3 class="project__name">
-            <a href="https://github.com/Maccy-Z/Active_Learning_Phase_Diagram">Active learning for phase diagrams</a>
-          </h3>
-          <p class="project__desc">
-            Bayesian active learning with Gaussian processes that picks the most
-            informative experiment to run next, mapping multi-phase diagrams in two and
-            three dimensions from a small fraction of the possible sample points.
-            Includes a 2D/3D viewer.
-          </p>
-          <p class="project__meta">
-            <span class="project__lang">Python</span>
-            <a href="https://github.com/Maccy-Z/Active_Learning_Phase_Diagram">Code</a>
-          </p>
-        </li>
-
-        <li class="project">
-          <h3 class="project__name">
-            <a href="https://github.com/Maxzhu123/fvm_solver">Finite-volume solver</a>
-          </h3>
-          <p class="project__desc">
-            A compressible finite-volume solver with Newtonian, power-law, Carreau and
-            Herschel&ndash;Bulkley viscosity models, isentropic, characteristic and
-            farfield boundary conditions, mesh generation for nozzle and ellipse
-            geometries, and CUDA benchmarks in two and three dimensions.
-          </p>
-          <p class="project__meta">
-            <span class="project__lang">Python</span>
-            <a href="https://github.com/Maxzhu123/fvm_solver">Code</a>
-          </p>
-        </li>
-      </ul>
     </div>
   </section>
 
