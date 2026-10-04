@@ -1,18 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Max Zhu</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Max Zhu — PhD student, University of Cambridge</title>
+<meta name="description" content="Max Zhu is a PhD student in the Department of Pure Mathematics and Mathematical Statistics at the University of Cambridge, working on machine learning.">
+
+<!-- Set the theme before first paint to avoid a flash of the wrong colours. -->
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "light" || t === "dark") document.documentElement.dataset.theme = t;
+    } catch (e) {}
+  })();
+</script>
+
+<meta name="theme-color" content="#fcfcfb" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>Max Zhu</h1>
-    <p class="tagline">Placeholder page &mdash; replace this with your own content.</p>
-    <ul class="links">
-      <li><a href="https://github.com/Maxzhu123">GitHub</a></li>
-    </ul>
-  </main>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!--
+  ===========================================================================
+  CONTENT CHECKLIST — everything below is placeholder text, ready to replace.
+  Search for "EDIT" to find each spot.
+  Auto-filled and worth confirming: name, role, supervisor, email, GitHub.
+  ===========================================================================
+-->
+
+<header class="site-header" data-header>
+  <div class="wrap site-header__inner">
+    <a class="brand" href="#top">
+      <span class="brand__mark" aria-hidden="true">MZ</span>
+      <span class="brand__text">Max Zhu</span>
+    </a>
+
+    <nav class="nav" aria-label="Sections" data-nav>
+      <a class="nav__link" href="#about">About</a>
+      <a class="nav__link" href="#research">Research</a>
+      <a class="nav__link" href="#publications">Publications</a>
+      <a class="nav__link" href="#teaching">Teaching</a>
+      <a class="nav__link" href="#contact">Contact</a>
+    </nav>
+
+    <button class="theme-toggle" type="button" data-theme-toggle
+            aria-label="Switch colour theme" title="Switch colour theme">
+      <svg class="theme-toggle__moon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/>
+      </svg>
+      <svg class="theme-toggle__sun" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <circle cx="12" cy="12" r="4"/>
+        <path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4m11.4-11.4 1.4-1.4"/>
+      </svg>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+  <span id="top"></span>
+
+  <!-- ===================== Hero ===================== -->
+  <section class="hero">
+    <div class="wrap">
+      <h1 class="hero__name">Max Zhu</h1>
+
+      <!-- EDIT: role / affiliation line -->
+      <p class="hero__role">
+        PhD student in the
+        <strong>Department of Pure Mathematics and Mathematical Statistics</strong>
+        at the <strong>University of Cambridge</strong>, supervised by
+        <a href="https://www.dpmms.cam.ac.uk/~qz280/">Qingyuan Zhao</a>.
+        I work on machine learning.
+      </p>
+
+      <ul class="hero__links">
+        <li>
+          <a class="pill pill--primary" href="mailto:mz406@cam.ac.uk">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2.5" y="4.5" width="19" height="15" rx="2.5"/>
+              <path d="M3 7.5l9 6 9-6"/>
+            </svg>
+            Email
+          </a>
+        </li>
+        <li>
+          <a class="pill" href="https://github.com/Maxzhu123">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .5C5.73.5.5 5.73.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.53-1.34-1.3-1.7-1.3-1.7-1.06-.72.08-.71.08-.71 1.17.08 1.79 1.2 1.79 1.2 1.04 1.78 2.74 1.27 3.4.97.1-.76.41-1.27.74-1.56-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.29 1.19-3.1-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.18 1.18a11 11 0 0 1 5.8 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.12 3.05.74.81 1.18 1.84 1.18 3.1 0 4.43-2.69 5.4-5.25 5.69.42.36.79 1.07.79 2.16v3.2c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5Z"/>
+            </svg>
+            GitHub
+          </a>
+        </li>
+        <li>
+          <a class="pill" href="https://www.dpmms.cam.ac.uk/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M22 9 12 4 2 9l10 5 10-5Z"/>
+              <path d="M6 11.5V17c0 1 2.7 2.5 6 2.5s6-1.5 6-2.5v-5.5"/>
+            </svg>
+            DPMMS
+          </a>
+        </li>
+        <!-- EDIT: add these once you have the links.
+        <li>
+          <a class="pill" href="cv.pdf">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M14 3v5h5"/>
+              <path d="M15 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/>
+            </svg>
+            CV
+          </a>
+        </li>
+        <li>
+          <a class="pill" href="https://scholar.google.com/">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                 stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 6h16M4 12h16M4 18h10"/>
+            </svg>
+            Google Scholar
+          </a>
+        </li>
+        -->
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== About ===================== -->
+  <section class="section" id="about">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 class="section__title">About</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+
+      <!-- EDIT: bio. Two or three sentences works well here. -->
+      <div class="prose stack">
+        <p>
+          I am a PhD student in the Statistical Laboratory, part of the Department of
+          Pure Mathematics and Mathematical Statistics at the University of Cambridge.
+          My research sits at the intersection of machine learning and statistics.
+        </p>
+        <p>
+          Before starting my PhD I completed <!-- EDIT: previous degree and institution --> my
+          previous degree, where I worked on <!-- EDIT: earlier research area --> topics in
+          machine learning.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Research ===================== -->
+  <section class="section" id="research">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 class="section__title">Research</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+
+      <div class="prose stack">
+        <!-- EDIT: research statement -->
+        <p>
+          I am interested in machine learning methodology: how models are built,
+          when they can be trusted, and what guarantees we can give for them.
+          My current work is supervised by
+          <a href="https://www.dpmms.cam.ac.uk/~qz280/">Qingyuan Zhao</a>.
+        </p>
+      </div>
+
+      <!-- EDIT: research areas -->
+      <ul class="tags" style="margin-top: var(--space-5)">
+        <li class="tag">Machine learning</li>
+        <li class="tag">Statistical methodology</li>
+        <li class="tag">Causal inference</li>
+        <li class="tag">Optimisation</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ===================== Publications ===================== -->
+  <section class="section" id="publications">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 class="section__title">Publications</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+
+      <!-- EDIT: replace these entries, or delete the whole <ol> and use the note below. -->
+      <ol class="pubs">
+        <li>
+          <article class="pub">
+            <div class="pub__year">2026</div>
+            <div>
+              <h3 class="pub__title">
+                <a href="#">Paper title goes here</a>
+              </h3>
+              <p class="pub__authors">
+                <span class="me">Max Zhu</span>, A. Coauthor, Q. Zhao.
+              </p>
+              <p class="pub__venue">Journal or conference name</p>
+              <ul class="pub__links">
+                <li><a href="#">Paper</a></li>
+                <li><a href="#">Code</a></li>
+                <li><a href="#">arXiv</a></li>
+              </ul>
+            </div>
+          </article>
+        </li>
+
+        <li>
+          <article class="pub">
+            <div class="pub__year">2025</div>
+            <div>
+              <h3 class="pub__title">
+                <a href="#">Another paper title goes here</a>
+              </h3>
+              <p class="pub__authors">
+                A. Coauthor, <span class="me">Max Zhu</span>.
+              </p>
+              <p class="pub__venue">Workshop or conference name</p>
+              <ul class="pub__links">
+                <li><a href="#">Paper</a></li>
+                <li><a href="#">Poster</a></li>
+              </ul>
+            </div>
+          </article>
+        </li>
+      </ol>
+
+      <!-- Alternative for when there are no papers yet — swap in and delete the list above:
+      <p class="note">Papers and preprints will appear here.</p>
+      -->
+    </div>
+  </section>
+
+  <!-- ===================== Teaching ===================== -->
+  <section class="section" id="teaching">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 class="section__title">Teaching</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+
+      <div class="prose stack">
+        <!-- EDIT: supervision / teaching. Delete the section if not applicable. -->
+        <p>
+          I supervise undergraduate supervisions in the Statistical Laboratory.
+          Details of the courses I have taught will appear here.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== Contact ===================== -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 class="section__title">Contact</h2>
+        <span class="section__rule" aria-hidden="true"></span>
+      </div>
+
+      <ul class="facts">
+        <li>
+          <span class="facts__label">Email</span>
+          <span><a href="mailto:mz406@cam.ac.uk">mz406@cam.ac.uk</a></span>
+        </li>
+        <li>
+          <span class="facts__label">Office</span>
+          <span><!-- EDIT: office --> Centre for Mathematical Sciences, Wilberforce Road, Cambridge CB3 0WB</span>
+        </li>
+        <li>
+          <span class="facts__label">Department</span>
+          <span><a href="https://www.dpmms.cam.ac.uk/">DPMMS</a>, University of Cambridge</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap site-footer__inner">
+    <span>&copy; <span data-year>2026</span> Max Zhu</span>
+    <span>Built as a static site, hosted on GitHub Pages.</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
