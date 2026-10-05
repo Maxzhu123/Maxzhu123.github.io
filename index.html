@@ -204,17 +204,18 @@
       <ul class="projects">
         <li class="project">
           <h3 class="project__name">
-            <a href="https://github.com/Maxzhu123/bitsparse">Sparse activations in training</a>
+            <a href="https://github.com/Maxzhu123/Bitmask_Sparsity">Sparse activations in training</a>
           </h3>
           <p class="project__desc">
-            A training-time codec that keeps only the nonzero activations behind a ReLU
-            feed-forward layer, stored as a packed bitmask with tile offsets and
-            reconstructed during the backward pass. Supports BF16 and FP8 storage,
-            squared ReLU and optional sign-bit packing, with Triton kernels benchmarked
-            against CSR, nvCOMP and dense compaction on nanoGPT and Nemotron-H.
+            A training-time codec for the activations saved for backward in PyTorch
+            feed-forward layers. Instead of storing them densely it keeps the nonzero
+            values plus a bitmask of their positions, and reconstructs them on the GPU
+            during the backward pass. Supports BF16 and FP8 storage, ReLU and
+            ReLU-squared activations, optional sign-bit packing, and a buffer that
+            layers can share, with Triton kernels and a nanoGPT training example.
           </p>
           <p class="project__meta">
-            <a href="https://github.com/Maxzhu123/bitsparse">Code</a>
+            <a href="https://github.com/Maxzhu123/Bitmask_Sparsity">Code</a>
           </p>
         </li>
 
